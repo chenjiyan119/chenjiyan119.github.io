@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>chenjiyan119</title>
+  
+  
+  <link href="https://chenjiyan119.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://chenjiyan119.github.io/"/>
+  <updated>2021-04-29T09:55:57.295Z</updated>
+  <id>https://chenjiyan119.github.io/</id>
+  
+  <author>
+    <name>chenjiyan119</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>纪念搭建过程中的坑</title>
+    <link href="https://chenjiyan119.github.io/2021/04/29/%E7%BA%AA%E5%BF%B5%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%9D%91/"/>
+    <id>https://chenjiyan119.github.io/2021/04/29/%E7%BA%AA%E5%BF%B5%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%9D%91/</id>
+    <published>2021-04-29T08:27:51.000Z</published>
+    <updated>2021-04-29T09:55:57.295Z</updated>
+    
+    <content type="html"><![CDATA[<p>知易行难，看起来简单的不要不要的东西自己一做，问题就来了。。</p><h1 id="对hexo的理解"><a href="#对hexo的理解" class="headerlink" title="对hexo的理解"></a>对hexo的理解</h1><p>相当于是一个把简单易读的md文件转换成html文档的工具，本身靠很多插件来实现不同的功能，用的时候按需选取。使用过程有坑如下：</p><h2 id="组件取消"><a href="#组件取消" class="headerlink" title="组件取消"></a>组件取消</h2><p>hexo代码迭代更新的过程中，一些可能不太常用的默认组件会取消，导致一部分theme无法正常使用，但是百度一下解君愁。</p><h2 id="关于public目录"><a href="#关于public目录" class="headerlink" title="关于public目录"></a>关于public目录</h2><p>不同的theme使用方法上也有差异，除了需要的插件，有些主题会把默认素材路径放在public下，这样的话，一个clean，素材就没了，使用的时候，素材路径得改</p><p>clean操作会重置public文件夹和database</p><figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\EDZ\chenjiyan119.github.io&gt;hexo clean</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br></pre></td></tr></tbody></table></figure><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>hexo生成的文档在本地可以使用，但是要让大家都看得见，还得找一个合适的托管场所，github免费提供，非常好使，在下载了专门给github格式使用的插件后，就可以部署了</p><p>部署过程发现样式文件没有正常调用，试了网上所有的办法都不行，最后把.deploy_git文件夹直接删除后重新生成就好了。。</p><p>经过后面对文章标签的修改重生成，发现原因，每次生成推送并不会删除之前生成的多余目录，所以修改配置文件后就必须要全部删掉重新生成了，这样就能保证所有部分都是新的，不会被旧内容影响</p><p>好在文章不受影响，不然每次更新多么麻烦</p><p>修改、删除文章也需要删文件夹。。。</p><h1 id="关于theme"><a href="#关于theme" class="headerlink" title="关于theme"></a>关于theme</h1><p>主题掌管着博客想要展示的方式，找到一个喜欢的主题，就可以无痛开始输出内容了，本身审美无能的人也很适合</p><p>写着写着，需要插入一个图片，发现图片还要辣么多步骤，实在是太蓝了</p><p>解决思路两种，一种是先放在网上，然后调用对应路径，好麻烦呦</p><p>一种是直接把图片转成符合标准的二进制码，也挺麻烦</p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>文件占用会影响文章推送，还得先保存了，再关闭了才能正常生成</p><p>待续… …</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;知易行难，看起来简单的不要不要的东西自己一做，问题就来了。。&lt;/p&gt;
+&lt;h1 id=&quot;对hexo的理解&quot;&gt;&lt;a href=&quot;#对hexo的理解&quot; class=&quot;headerlink&quot; title=&quot;对hexo的理解&quot;&gt;&lt;/a&gt;对hexo的理解&lt;/h1&gt;&lt;p&gt;相当于是一个把简</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="https://chenjiyan119.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="博客搭建" scheme="https://chenjiyan119.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="hexo" scheme="https://chenjiyan119.github.io/tags/hexo/"/>
+    
+    <category term="github" scheme="https://chenjiyan119.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不可能三角</title>
+    <link href="https://chenjiyan119.github.io/2021/04/28/%E4%B8%8D%E5%8F%AF%E8%83%BD%E4%B8%89%E8%A7%92/"/>
+    <id>https://chenjiyan119.github.io/2021/04/28/%E4%B8%8D%E5%8F%AF%E8%83%BD%E4%B8%89%E8%A7%92/</id>
+    <published>2021-04-28T09:36:58.000Z</published>
+    <updated>2021-04-29T08:22:26.164Z</updated>
+    
+    <content type="html"><![CDATA[<p>不可能三角指：自媒体不能兼顾三点：内容精美、专业性、更新频率</p><p>回形针是一个优秀的科普节目，直到他涉及到你最擅长的领域，让你看的一脸懵逼–月风</p><p>2333，没错，所以很多科普节目时不靠谱的，那种啥方面都涉及的尤其不靠谱，所以要看还得看专门做一个方面的</p><p>所以不要觉得啥都会一些很厉害，一到专业的人面前都成了渣渣</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;不可能三角指：自媒体不能兼顾三点：内容精美、专业性、更新频率&lt;/p&gt;
+&lt;p&gt;回形针是一个优秀的科普节目，直到他涉及到你最擅长的领域，让你看的一脸懵逼–月风&lt;/p&gt;
+&lt;p&gt;2333，没错，所以很多科普节目时不靠谱的，那种啥方面都涉及的尤其不靠谱，所以要看还得看专门做一个方面的</summary>
+      
+    
+    
+    
+    <category term="生活" scheme="https://chenjiyan119.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="随想" scheme="https://chenjiyan119.github.io/categories/%E7%94%9F%E6%B4%BB/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+    <category term="鱼与熊掌不可得兼" scheme="https://chenjiyan119.github.io/tags/%E9%B1%BC%E4%B8%8E%E7%86%8A%E6%8E%8C%E4%B8%8D%E5%8F%AF%E5%BE%97%E5%85%BC/"/>
+    
+  </entry>
+  
+</feed>
